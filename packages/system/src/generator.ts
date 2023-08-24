@@ -10,6 +10,7 @@ export class StyleGenerator {
   private className: string;
 
   constructor(props: StyledProps & PseudoProps, isDynamic = false) {
+    console.log(props);
     if (!props || Object.keys(props).length === 0) {
       this.className = "";
       return;
@@ -21,12 +22,14 @@ export class StyleGenerator {
     const pseudoProps: { [key: string]: any } = {};
 
     for (const [propName, propValue] of Object.entries(props)) {
+      console.log(propName, propValue);
       if (
         typeof propValue === "string" &&
         /[a-zA-Z]+\.[a-zA-Z0-9]+/.test(propValue)
       ) {
         const userTheme = theme.getUserTheme();
         const propKey = propValue.split(".")[0] as StyleThemeKeyType;
+        console.log(propKey, userTheme[propKey]);
         if (userTheme[propKey] !== undefined) {
           for (const key in userTheme[propKey]) {
             if (propValue.trim() === key) {

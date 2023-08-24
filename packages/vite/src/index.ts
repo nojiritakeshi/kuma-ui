@@ -1,4 +1,5 @@
-import { transform } from "@kuma-ui/babel-plugin";
+// import { transform } from "@kuma-ui/babel-plugin";
+import { transform } from "../../babel-plugin/src/transform";
 import { Plugin } from "vite";
 import path from "path";
 import { buildSync } from "esbuild";

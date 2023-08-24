@@ -1,5 +1,6 @@
 import { transformSync } from "@babel/core";
-import { compile } from "@kuma-ui/compiler";
+// import { compile } from "@kuma-ui/compiler";
+import { compile } from "../../compiler/src/compile";
 import pluin from ".";
 import { sheet } from "@kuma-ui/sheet";
 

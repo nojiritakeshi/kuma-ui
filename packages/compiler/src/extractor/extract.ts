@@ -11,8 +11,9 @@ import {
   normalizePseudo,
   all,
   SystemStyle,
-  StyleGenerator,
+  // StyleGenerator,
 } from "@kuma-ui/system";
+import { StyleGenerator } from "/home/nojiri/kuma-ui/packages/system/src/generator.ts";
 import {
   componentDefaultProps,
   componentList,
